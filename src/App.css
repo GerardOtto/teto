@@ -1,0 +1,221 @@
+/* Fuente y reset */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+
+body {
+  
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffe6f2, #ffeefd);
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ff6fa3;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap; /* ✅ Se adapta en pantallas chicas */
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-logo img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  flex-wrap: wrap; /* ✅ Se quiebra en móvil */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap; /* ✅ Hace responsivo */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #ffb6d9, #ff80c0);
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 1000px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem); /* ✅ Escala con el ancho */
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.btn-primary {
+  background: white;
+  color: #ff4b91;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #ffe0f0;
+}
+
+/* Secciones */
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #ff4b91;
+}
+
+/* Biografía */
+.bio-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: auto;
+  max-width: 600px; /* ✅ Más ancho y centrado */
+  text-align: left;
+}
+
+.bio-icon {
+  width: 60px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* Galería */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* ✅ Flexible */
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Videos */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ✅ Se ajusta */
+  gap: 1rem;
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* ✅ Siempre proporción correcta */
+  border-radius: 15px;
+  border: none;
+}
+
+/* Fans */
+.fan-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  max-width: 500px;
+  margin: auto; /* ✅ Se centra */
+}
+
+.fan-card button {
+  background: #ff4b91;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fan-card button:hover {
+  background: #ff2e7a;
+}
+
+/* Footer */
+.footer {
+  background: #ff6fa3;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ✅ Mobile tweaks */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
