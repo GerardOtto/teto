@@ -86,6 +86,7 @@ function App() {
 
       <footer className="footer">
         <p>✨ Fanpage dedicada a Kasane Teto | Creado con React + Vite ✨</p>
+        <p> Fernando felicidades por ser el homosexual #1 en el planeta Tierra! </p>
       </footer>
     </>
   )
